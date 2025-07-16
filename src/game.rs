@@ -88,8 +88,6 @@ impl Wordle {
         let solutions = get_words_from_file("./solutions.txt");
 
         let solution = solutions.get_random_item().clone();
-        let solution = String::from("close"); 
-
 
         let mut words: Vec<Vec<Character>> = Vec::new();
 
