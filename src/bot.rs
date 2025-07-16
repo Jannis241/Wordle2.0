@@ -5,6 +5,9 @@ use crate::game::{Random, Wordle, Color};
 
 
 pub fn get_best_word(wordle: &Wordle) -> String {
+    if wordle.guesses == 0 {
+        return String::from("crane");
+    }
     let mut green_letters: HashMap<usize, char> = HashMap::new();
     let mut yellow_letters: Vec<(usize, char)> = Vec::new();
     let mut grey_letters: HashSet<char> = HashSet::new();
